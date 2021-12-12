@@ -5,16 +5,11 @@ import axios from "axios";
 
 function Index(props) {
 
-  const [followers, setFollowers] = useState([]);
-  useEffect(() => {
-    setFollowers(props.data);
-  }, []);
-
   return (
     <>
       <MetaData title={"Followers"} />
 
-      <Followers followers={followers} />
+      <Followers followers={props.data} />
     </>
   );
 }
